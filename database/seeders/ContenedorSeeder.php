@@ -15,9 +15,10 @@ class ContenedorSeeder extends Seeder
     {
         for ($i = 1; $i <= 5; $i++) {
             DB::table('contenedores')->insert([
-                'codigo' => 'COD-00' . $i,
-                'descripcion' => 'Descripción del contenedor ' . $i,
-                'capacidad' => rand(1000, 5000),
+                'identificador' => 'COD-00' . $i,
+                'color' => 'color',
+                'activo' => true,
+                'toneladas_maximas' => rand(1000, 2000),
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
